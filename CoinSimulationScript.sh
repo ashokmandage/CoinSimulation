@@ -50,3 +50,18 @@ echo 'tail wones by' $difference
 else
 echo 'ITs Tieeee!!!!'
 fi
+difference=0;
+if [ $headCount -eq $tailCount ]
+then
+while [ $difference -gt 2 ]
+do
+echo $flipCoin
+if [ $flipCoin -eq $isHead ]
+then
+headCount=$(($headCount + 1));
+else
+tailCount=$(($tailCount + 1));
+fi
+done
+
+
