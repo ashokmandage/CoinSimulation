@@ -23,3 +23,30 @@ done
 
 echo 'Head wons= ' $headCount
 echo 'Tail wons= ' $tailCount
+
+wonLimit=21;
+while [ $headCount -eq $wonLimit ] || [ $tailCount -eq $wonLimit ]
+do
+echo $flipCoin
+if [ $flipCoin -eq $isHead ]
+then
+headCount=$(($headCount + 1));
+else
+tailCount=$(($tailCount + 1));
+fi
+done
+
+
+if [ $headCount -gt $tailCount ]
+then
+difference=$(($headCount - $tailCount))
+echo 'head wones by' $difference
+
+elif [  $headCount -lt $tailCount ]
+then
+difference=$(($tailCount - $headCount))
+echo 'tail wones by' $difference
+
+else
+echo 'ITs Tieeee!!!!'
+fi
